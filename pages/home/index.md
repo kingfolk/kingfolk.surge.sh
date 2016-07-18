@@ -1,10 +1,22 @@
 ---
-title: React Static Boilerplate
+title: Projects
 ---
 
-## Welcome!
+## Personal Interest
 
-This is a single-page application powered by React and Material Design Lite (MDL).
+1. Web&Mobile dev.
+2. Programming language.
+3. Vision&Machine Learning.
+4. Graphics&GPU
 
-https://github.com/kriasoft/react-static-boilerplate
+### [Waldboost](https://github.com/kingfolk/waldboost)
 
+Boosting Algorithm.
+
+### [Shared Matting WebGL solution](https://github.com/kingfolk/shared_matting_webgl)
+
+Real-time Alpha matting algorithm. [demo](/projects/shared_matting_webgl)
+
+### [Igloo in Apple/Swift](https://github.com/kingfolk/igloo)
+
+An easy-to-use OpenGL wrapper for GPGPU developed with Apple/Swift.

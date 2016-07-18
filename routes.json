@@ -8,6 +8,10 @@
     }
   },
   {
+    "path": "/projects/shared_matting_webgl",
+    "page": "./pages/home/sharedMatting"
+  },
+  {
     "path": "/error",
     "page": "./pages/error",
     "chunk": "main"

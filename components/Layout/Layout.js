@@ -29,7 +29,7 @@ class Layout extends React.Component {
       <div className="mdl-layout mdl-js-layout" ref="root">
         <div className="mdl-layout__inner-container">
           <Header>
-            <span className="mdl-layout-title">React Static Boilerplate</span>
+            <span className="mdl-layout-title">Jialei Jin</span>
             <div className="mdl-layout-spacer"></div>
             <Navigation />
           </Header>

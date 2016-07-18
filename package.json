@@ -10,10 +10,13 @@
     "babel-polyfill": "^6.9.1",
     "fastclick": "^1.0.6",
     "history": "^3.0.0",
+    "igloo-ext": "^0.1.6",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-dropzone": "^3.5.3",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "webpack-glsl-loader": "^1.0.1",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
