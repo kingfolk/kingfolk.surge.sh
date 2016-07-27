@@ -17,8 +17,16 @@
     "chunk": "main"
   },
   {
-    "path": "/about",
-    "page": "./pages/about"
+    "path": "/resume",
+    "page": "./pages/resume"
+  },
+  {
+    "path": "/photo",
+    "page": "./pages/photo"
+  },
+  {
+    "path": "/contact",
+    "page": "./pages/contact"
   },
   {
     "path": "/tasks/:status(pending|completed)?",

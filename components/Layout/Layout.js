@@ -9,8 +9,7 @@
  */
 
 import React from 'react';
-import Header from './Header';
-import Navigation from './Navigation';
+import Header from './Header.js';
 import Footer from '../Footer';
 import s from './Layout.css';
 
@@ -26,13 +25,9 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div className="mdl-layout mdl-js-layout" ref="root">
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header" ref="root">
         <div className="mdl-layout__inner-container">
-          <Header>
-            <span className="mdl-layout-title">Jialei Jin</span>
-            <div className="mdl-layout-spacer"></div>
-            <Navigation />
-          </Header>
+          <Header />
           <main className="mdl-layout__content">
             <div className={s.content} {...this.props} />
             <Footer />

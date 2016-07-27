@@ -10,8 +10,25 @@
 
 import React from 'react';
 import Link from '../Link';
+import classNames from 'classnames';
 
 class Navigation extends React.Component {
+
+  constructor() {
+    super();
+    // this.links = {
+    //   'Home': '/',
+    //   'Resume': '/resume',
+    //   'About': '/about',
+    //   'Not Found': '/not-found'
+    // }
+    this.links = new Map()
+      .set('Home', '/')
+      .set('Resume', '/resume')
+      .set('Random Photo', '/photo')
+      .set('Contact', '/contact');
+
+  }
 
   componentDidMount() {
     window.componentHandler.upgradeElement(this.refs.root);
@@ -23,13 +40,23 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <nav className="mdl-navigation" ref="root">
-        <Link className="mdl-navigation__link" to="/">Home</Link>
-        <Link className="mdl-navigation__link" to="/resume">Resume</Link>
-        <Link className="mdl-navigation__link" to="/about">About</Link>
-        <Link className="mdl-navigation__link" to="/not-found">Not Found</Link>
+      <nav className="mdl-navigation mdl-typography--body-1-force-preferred-font" ref="root">
+        {
+          this.navLinks()
+        }
       </nav>
     );
+  }
+
+  navLinks() {
+    let activeTab = this.props.activeTab;
+    var arr = [];
+    for (let [tab, to] of this.links) {
+      let cn = classNames('mdl-navigation__link', {'is-active': tab == activeTab});
+      let row = <Link className={cn} to={to}>{tab}</Link>;
+      arr.push(row)
+    }
+    return arr;
   }
 
 }

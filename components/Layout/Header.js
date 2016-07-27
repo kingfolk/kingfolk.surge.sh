@@ -9,6 +9,8 @@
  */
 
 import React from 'react';
+import Navigation from './Navigation';
+import s from './Header.css';
 
 class Header extends React.Component {
 
@@ -21,9 +23,20 @@ class Header extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
-      <header className="mdl-layout__header" ref="root">
-        <div className="mdl-layout__header-row" {...this.props} />
+      <header className={`mdl-layout__header mdl-layout__header--waterfall ${s['portfolio-header']}`} ref="root">
+        <div className={`mdl-layout__header-row ${s['portfolio-logo-row']}`}>
+          <span className={s["mdl-layout__title"]}>
+            <div className={s["portfolio-logo"]}></div>
+            <div className={s["mdl-layout__title"]}>
+                Jialei Jin
+            </div>
+          </span>
+        </div>
+        <div className={`mdl-layout__header-row ${s['portfolio-navigation-row']} mdl-layout--large-screen-only`}>
+          <Navigation />
+        </div>
       </header>
     );
   }

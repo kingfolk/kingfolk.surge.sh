@@ -8,18 +8,41 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { createStore } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import createLogger from 'redux-logger'
+import rootReducers from './reducers'
 
-// Centralized application state
-// For more information visit http://redux.js.org/
-const store = createStore((state, action) => {
-  // TODO: Add action handlers (aka "reduces")
-  switch (action) {
-    case 'COUNT':
-      return { ...state, count: (state.count || 0) + 1 };
-    default:
-      return state;
-  }
+const loggerMiddleware = createLogger({
+  level: 'info',
+  collapsed: true,
+  duration: true
+})
+
+const finalStoreCreator = applyMiddleware(
+	loggerMiddleware,
+)(createStore)
+
+let storeCreator = initialState => {
+	return finalStoreCreator(rootReducers, initialState)
+}
+
+let store = storeCreator({
+  activeTab: 'Home',
+  count: 0
 });
 
 export default store;
+
+// Centralized application state
+// For more information visit http://redux.js.org/
+// const store = createStore((state, action) => {
+//   // TODO: Add action handlers (aka "reduces")
+//   switch (action) {
+//     case 'COUNT':
+//       return { ...state, count: (state.count || 0) + 1 };
+//     default:
+//       return state;
+//   }
+// });
+//
+// export default store;

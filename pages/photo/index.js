@@ -11,35 +11,22 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { title, html } from './index.md';
-import s from './styles.css';
-import Card from './card';
-import projects from './projects'
 
-class HomePage extends React.Component {
+class AboutPage extends React.Component {
 
   componentDidMount() {
     document.title = title;
   }
 
   render() {
-    console.log('this.props: ');
-    console.log(this);
     return (
       <Layout>
-        <div className="content-grid mdl-grid">
-          {
-            _.map(projects, function(p) {
-              return (<Card
-                {...p}
-              />);
-            })
-          }
-          
-        </div>
+        <h1>{title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </Layout>
     );
   }
 
 }
 
-export default HomePage;
+export default AboutPage;

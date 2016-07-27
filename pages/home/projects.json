@@ -1,0 +1,35 @@
+[
+  {
+    "title": "WaldBoost",
+    "cover": "./waldBoostChart.jpg",
+    "desc": "Boosting Algorithm for training quality corner detector",
+    "links": {
+      "github": "https://github.com/kingfolk/waldboost"
+    }
+  },
+  {
+    "title": "Shared Matting WebGL",
+    "cover": "./doll.png",
+    "desc": "Real-time Alpha matting algorithm.",
+    "links": {
+      "github": "https://github.com/kingfolk/shared_matting_webgl",
+      "demo": "/projects/shared_matting_webgl"
+    }
+  },
+  {
+    "title": "Igloo in Apple/Swift",
+    "cover": "./igloo.jpg",
+    "desc": "An easy-to-use OpenGL wrapper for GPGPU developed with Apple/Swift.",
+    "links": {
+      "github": "https://github.com/kingfolk/igloo"
+    }
+  },
+  {
+    "title": "Featherweight Java in Scala",
+    "cover": "./java.jpg",
+    "desc": "An Featherweight Java language implemented in Scala.",
+    "links": {
+      "github": "https://github.com/kingfolk/FeatherweightJava"
+    }
+  }
+]

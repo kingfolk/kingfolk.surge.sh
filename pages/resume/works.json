@@ -1,0 +1,18 @@
+[
+  {
+    "institution": "Pryv",
+    "logo": "./pryv-logo.png",
+    "location": "Lausanne, Switzerland",
+    "from": "Jul, 2014",
+    "to": "Sep, 2014",
+    "title": "Software Engineer"
+  },
+  {
+    "institution": "Fiksu",
+    "logo": "./fiksu-logo.jpg",
+    "location": "Helsinki, Finland",
+    "from": "Mar, 2015",
+    "to": "Aug, 2015",
+    "title": "Software Engineer"
+  }
+]

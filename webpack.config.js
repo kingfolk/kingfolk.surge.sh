@@ -185,6 +185,9 @@ const config = {
       // Add vendor prefixes to CSS rules using values from caniuse.com
       // https://github.com/postcss/autoprefixer
       require('autoprefixer')(),
+      // Load assets in CSS
+      // https://github.com/assetsjs/postcss-assets
+      require('postcss-assets')({ loadPaths: [path.resolve(__dirname, './images')] }),
     ];
   },
 
