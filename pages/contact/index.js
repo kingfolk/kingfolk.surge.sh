@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -21,8 +21,10 @@ class AboutPage extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+       Comming up soon...
+       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       </Layout>
     );
   }

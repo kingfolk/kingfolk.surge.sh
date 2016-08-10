@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -10,9 +10,10 @@
 
 import React from 'react';
 import Layout from '../../components/Layout';
+import Gallery from 'react-photo-gallery';
 import { title, html } from './index.md';
 
-class AboutPage extends React.Component {
+class PhotoPage extends React.Component {
 
   componentDidMount() {
     document.title = title;
@@ -21,12 +22,16 @@ class AboutPage extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div>
+         Comming up soon...
+         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
       </Layout>
     );
   }
 
 }
 
-export default AboutPage;
+export default PhotoPage;

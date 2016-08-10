@@ -1,6 +1,7 @@
+/*TODO: FIX URL PROBLEM*/
 .portfolio-header {
   position: relative;
-  background-image: url(https://getmdl.io/templates/portfolio/images/header-bg.jpg);
+  background-image: url(http://4.bp.blogspot.com/-o7Sa1IF4FE8/VjIZeuLWCjI/AAAAAAAAkTE/5h-pOqeOqpU/s1600/Abstract%2BPainting%2BHD%2BWallpapers%2B1.jpg);
 }
 
 .portfolio-header :global .mdl-layout__header-row {
@@ -17,7 +18,7 @@
 }
 
 .portfolio-logo {
-  background: url(/Users/king/Codes/web/surge.sh/components/Layout/portrait.jpg) 50% no-repeat;
+  background: url(https://raw.githubusercontent.com/kingfolk/kingfolk.surge.sh/master/components/Layout/portrait.jpg) 50% no-repeat;
   background-size: cover;
   height: 150px;
   width: 150px;

@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -53,7 +53,6 @@ class ResumePage extends React.Component {
   }
 
   render() {
-    console.log(s);
     return (
       <Layout>
       {/*<div className="mdl-layout__content">*/}
@@ -66,6 +65,9 @@ class ResumePage extends React.Component {
                   My name is Jialei Jin, 金嘉磊. I am a life-long student, programmer and "chef". I love programing language-wise and algorithm-wise.
                   My interests are in Programming Language, Computer Vision and Graphics.
                 </div>
+              </div>
+              <div className="mdl-card__actions">
+                <a href="#" className="mdl-button">Download PDF Resume</a>
               </div>
             </div>
           </section>
@@ -81,9 +83,6 @@ class ResumePage extends React.Component {
                   })
                 }
               </div>
-              <div className="mdl-card__actions">
-                <a href="#" className="mdl-button">Read our features</a>
-              </div>
             </div>
           </section>
           <section className="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -97,9 +96,6 @@ class ResumePage extends React.Component {
                       />);
                   })
                 }
-              </div>
-              <div className="mdl-card__actions">
-                <a href="#" className="mdl-button">Read our features</a>
               </div>
             </div>
           </section>
@@ -124,9 +120,6 @@ class ResumePage extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="mdl-card__actions">
-                <a href="#" className="mdl-button">Read our features</a>
-              </div>
             </div>
           </section>
           <section className="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -149,9 +142,6 @@ class ResumePage extends React.Component {
                     Proficient
                   </div>
                 </div>
-              </div>
-              <div className="mdl-card__actions">
-                <a href="#" className="mdl-button">Read our features</a>
               </div>
             </div>
           </section>

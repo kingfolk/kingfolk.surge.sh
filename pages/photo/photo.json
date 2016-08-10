@@ -1,0 +1,14 @@
+[
+  {
+    "src": "http://example.com/example/img1_small.jpg",
+    "width": 681,
+    "height": 1024,
+    "aspectRatio": 1.5,
+    "lightboxImage":{
+    "src": "http://example.com/example/img1_large.jpg",
+    "srcset: [
+      
+    ]
+    }
+  }
+]

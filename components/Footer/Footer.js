@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -10,11 +10,12 @@
 
 import React from 'react';
 import Link from '../Link';
+import s from './styles.css';
 
 // TODO: REMOVE <LI> LINKE
 function Footer() {
   return (
-    <footer className="mdl-mini-footer">
+    <footer className={`mdl-mini-footer ${s['page-footer']}`}>
       <div className="mdl-mini-footer__left-section">
         <div className="mdl-logo">© kingfolk</div>
         <ul className="mdl-mini-footer__link-list">

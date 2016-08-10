@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -19,7 +19,6 @@ import { Provider } from 'react-redux';
 import store from './core/store';
 import router from './core/router';
 import history from './core/history';
-import vv from './pages/home';
 
 let routes = require('./routes.json'); // Loaded with utils/routes-loader.js
 const container = document.getElementById('container');
@@ -44,6 +43,8 @@ function renderComponent(component) {
 // Find and render a web page matching the current URL path,
 // if such page is not found then render an error page (see routes.json, core/router.js)
 function render(location) {
+	console.log('routes');
+	console.log(routes);
   router.resolve(routes, location)
     .then(renderComponent)
     .catch(error => router.resolve(routes, { ...location, error }).then(renderComponent));
@@ -51,7 +52,9 @@ function render(location) {
 
 // Handle client-side navigation by using HTML5 History API
 // For more information visit https://github.com/ReactJSTraining/history/tree/master/docs#readme
-history.listen(render);
+history.listen(function(l) {
+	render(l);
+});
 render(history.getCurrentLocation());
 
 // Eliminates the 300ms delay between a physical tap

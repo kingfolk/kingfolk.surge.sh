@@ -2,7 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import Layout from '../../../components/Layout';
 import Dropzone from 'react-dropzone'
 import SharedGL from './shared.js'
-import { title, html } from './index.md';
 import s from './styles.css';
 
 class ImageDropZone extends Component {
@@ -10,18 +9,6 @@ class ImageDropZone extends Component {
     this.props.onDrop(files[0]);
   }
   render() {
-    // return (
-    //   <Dropzone onDrop={this.onDrop.bind(this)}>
-    //     <div className={s['middle-align']}>
-    //       <span className={s['align-helper']}></span>
-    //       {
-    //         this.props.file ?
-    //         (<img className={s['fill-box']} src={this.props.file.preview} />)
-    //         : (<img className={s['fill-box']} src='../images/file_add.png' />)
-    //       }
-    //     </div>
-    //   </Dropzone>
-    // );
     return (
       <Dropzone onDrop={this.onDrop.bind(this)}>
         <div className={s['middle-align']}>
@@ -55,7 +42,7 @@ class Page extends Component {
   }
 
   componentDidMount() {
-    document.title = title;
+    document.title = 'shared matting';
 
     let canvas = document.getElementById('matting-canvas');
     this.runner = new SharedGL(canvas);
@@ -70,6 +57,10 @@ class Page extends Component {
     return (
       <Layout>
         <div id={s['container']}>
+          <div>
+            Can download test data from <a href="http://www.alphamatting.com/datasets.php">http://www.alphamatting.com/datasets.php</a>
+          </div>
+          <br/>
           <div id={s['left-panel']}>
             <div id={s['image-box']}>
               <ImageDropZone
@@ -122,7 +113,6 @@ class Page extends Component {
   }
 
   onDropImage(file) {
-    console.log(file);
     this.setState({
       image: file
     })

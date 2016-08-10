@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -23,14 +23,13 @@ class Header extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <header className={`mdl-layout__header mdl-layout__header--waterfall ${s['portfolio-header']}`} ref="root">
         <div className={`mdl-layout__header-row ${s['portfolio-logo-row']}`}>
           <span className={s["mdl-layout__title"]}>
             <div className={s["portfolio-logo"]}></div>
             <div className={s["mdl-layout__title"]}>
-                Jialei Jin
+                I am watching U...
             </div>
           </span>
         </div>

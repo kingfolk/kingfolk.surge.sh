@@ -8,7 +8,7 @@
     }
   },
   {
-    "path": "/projects/shared_matting_webgl",
+    "path": "/shared_matting_webgl",
     "page": "./pages/home/sharedMatting"
   },
   {

@@ -215,7 +215,6 @@ export default class Shared {
     gl.viewport(0, 0, this.viewSize[0], this.viewSize[1]);
 
     let offset = new Float32Array([canvasScale.ol, canvasScale.ot]);
-    console.log(offset);
     this.programs.copy.use()
       .attrib('quad', this.buffers.quad, 2)
       .uniformi('state', 0)

@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -86,6 +86,7 @@ const config = {
           path.resolve(__dirname, './components'),
           path.resolve(__dirname, './core'),
           path.resolve(__dirname, './pages'),
+          path.resolve(__dirname, './pages/home'),
           path.resolve(__dirname, './main.js'),
         ],
         loader: 'babel-loader',

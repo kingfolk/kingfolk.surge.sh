@@ -1,6 +1,6 @@
 ## Routing and Navigation
 
-[React Static Boilerplate](https://github.com/kriasoft/react-static-boilerplate) (RSB) uses a
+[kingfolk](https://github.com/kriasoft/react-static-boilerplate) (RSB) uses a
 custom minimalistic (under 100 LOC) declarative routing approach that is easy to customize. It's
 comprised of five major parts:
 

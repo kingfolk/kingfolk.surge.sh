@@ -1,6 +1,6 @@
-# React Static Boilerplate &nbsp; [![Build Status](http://img.shields.io/travis/kriasoft/react-static-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/kriasoft/react-static-boilerplate) [![To-do](https://img.shields.io/waffle/label/kriasoft/react-static-boilerplate/to-do.svg?style=flat-square)](https://waffle.io/kriasoft/react-static-boilerplate) [![Online Chat](http://img.shields.io/badge/chat_room-%23react--static--boilerplate-blue.svg?style=flat-square)](https://gitter.im/kriasoft/react-static-boilerplate)
+# kingfolk &nbsp; [![Build Status](http://img.shields.io/travis/kriasoft/react-static-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/kriasoft/react-static-boilerplate) [![To-do](https://img.shields.io/waffle/label/kriasoft/react-static-boilerplate/to-do.svg?style=flat-square)](https://waffle.io/kriasoft/react-static-boilerplate) [![Online Chat](http://img.shields.io/badge/chat_room-%23react--static--boilerplate-blue.svg?style=flat-square)](https://gitter.im/kriasoft/react-static-boilerplate)
 
-> [**React Static Boilerplate**](https://github.com/kriasoft/react-static-boilerplate) (RSB) is an
+> [**kingfolk**](https://github.com/kriasoft/react-static-boilerplate) (RSB) is an
 > opinionated boilerplate and tooling for creating modern stand-alone web applications (aka
 > [SPA](https://en.wikipedia.org/wiki/Single-page_application)s) for a serverless architecture. RSB
 > significantly reduces cost by eliminating the need for servers such as EC2 instances because the

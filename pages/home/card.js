@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import _ from 'lodash';
 import s from './styles.css';
+import Link from '../../components/Link';
 
 export default class Card extends Component {
   render() {
@@ -26,12 +27,18 @@ export default class Card extends Component {
   renderLinks() {
     let links = ['github', 'demo', 'blog'];
     var res = [];
-    console.log(this.props.links)
     _.each(links, (link) => {
       let to = this.props.links[link];
       if (to) {
-        let row = (<a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
-          href={to}>{_.capitalize(link)}</a>);
+        let row;
+        if (link == 'github') {
+          row = (<a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+            href={to}>{_.capitalize(link)}</a>);
+        }
+        else {
+          row = (<Link className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+            to={to}>{_.capitalize(link)}</Link>);
+        }
         res.push(row);
       }
     })

@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -26,7 +26,7 @@ class Navigation extends React.Component {
       .set('Home', '/')
       .set('Resume', '/resume')
       .set('Random Photo', '/photo')
-      .set('Contact', '/contact');
+      .set('Contact', '/shared_matting_webgl');
 
   }
 

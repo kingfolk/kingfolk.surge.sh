@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -22,8 +22,6 @@ class HomePage extends React.Component {
   }
 
   render() {
-    console.log('this.props: ');
-    console.log(this);
     return (
       <Layout>
         <div className="content-grid mdl-grid">
@@ -34,7 +32,7 @@ class HomePage extends React.Component {
               />);
             })
           }
-          
+
         </div>
       </Layout>
     );

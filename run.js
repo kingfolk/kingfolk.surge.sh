@@ -1,5 +1,5 @@
 /**
- * React Static Boilerplate
+ * kingfolk
  * https://github.com/kriasoft/react-static-boilerplate
  *
  * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
@@ -17,7 +17,7 @@ const webpack = require('webpack');
 
 // TODO: Update configuration settings
 const config = {
-  title: 'React Static Boilerplate',        // Your website title
+  title: 'kingfolk',        // Your website title
   url: 'https://rsb.kriasoft.com',          // Your website URL
   project: 'react-static-boilerplate',      // Firebase project. See README.md -> How to Deploy
   trackingID: 'UA-XXXXX-Y',                 // Google Analytics Site's ID
