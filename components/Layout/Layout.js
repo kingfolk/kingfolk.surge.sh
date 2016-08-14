@@ -23,16 +23,24 @@ class Layout extends React.Component {
     window.componentHandler.downgradeElements(this.refs.root);
   }
 
+  // render() {
+  //   return (
+  //     <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header" ref="root">
+  //       <div className="mdl-layout__inner-container">
+  //         <Header />
+  //         <main className="mdl-layout__content">
+  //           <div className={s.content} {...this.props} />
+  //           <Footer />
+  //         </main>
+  //       </div>
+  //     </div>
+  //   );
+  // }
   render() {
     return (
-      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header" ref="root">
-        <div className="mdl-layout__inner-container">
-          <Header />
-          <main className="mdl-layout__content">
-            <div className={s.content} {...this.props} />
-            <Footer />
-          </main>
-        </div>
+      <div>
+        <Header />
+        <div className={s.content} {...this.props} />
       </div>
     );
   }

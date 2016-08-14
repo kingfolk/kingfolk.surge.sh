@@ -188,7 +188,11 @@ const config = {
       require('autoprefixer')(),
       // Load assets in CSS
       // https://github.com/assetsjs/postcss-assets
-      require('postcss-assets')({ loadPaths: [path.resolve(__dirname, './images')] }),
+      require('postcss-assets')({
+          loadPaths: ['images/'],
+          relative: true,
+        }
+      )
     ];
   },
 

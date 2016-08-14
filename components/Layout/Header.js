@@ -25,16 +25,8 @@ class Header extends React.Component {
   render() {
     return (
       <header className={`mdl-layout__header mdl-layout__header--waterfall ${s['portfolio-header']}`} ref="root">
-        <div className={`mdl-layout__header-row ${s['portfolio-logo-row']}`}>
-          <span className={s["mdl-layout__title"]}>
-            <div className={s["portfolio-logo"]}></div>
-            <div className={s["mdl-layout__title"]}>
-                I am watching U...
-            </div>
-          </span>
-        </div>
         <div className={`mdl-layout__header-row ${s['portfolio-navigation-row']} mdl-layout--large-screen-only`}>
-          <Navigation />
+          <h3>NOTE: This site is being maintained... 此页在维护中...</h3>
         </div>
       </header>
     );

@@ -19,28 +19,29 @@
 #container {
   display: table;
   margin: 0 auto;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #image-box {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #left-panel {
-  width: 250px;
-  margin-left: 30px;
+  width: 200px;
+  margin-left: 10px;
   float:left;
 }
 
 #right-content {
-  width: 700px;
+  width: 600px;
+  margin-left: 10px;
   float:left;
 }
 
 .square {
     background: #acacac;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
 }

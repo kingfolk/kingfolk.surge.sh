@@ -1,0 +1,26 @@
+[
+  {
+    "institution": "Zhejiang University(ZJU)",
+    "logo": "./images/zju-logo.jpg",
+    "location": "Hangzhou, China",
+    "from": "Sep, 2009",
+    "to": "Jul, 2013",
+    "title": "Bsc in Computer Science"
+  },
+  {
+    "institution": "National University of Ireland, Maynooth(NUIM)",
+    "logo": "./images/nuim-logo.gif",
+    "location": "Maynooth, Ireland",
+    "from": "Sep, 2012",
+    "to": "Feb, 2013",
+    "title": "Exchange student"
+  },
+  {
+    "institution": "ÉCOLE POLYTECHNIQUE FÉDÉRALE DE LAUSANNE(EPFL)",
+    "logo": "./images/epfl-logo.jpg",
+    "location": "Lausanne, Switzerland",
+    "from": "Sep, 2013",
+    "to": "Jul, 2016",
+    "title": "Msc in Computer Science"
+  }
+]

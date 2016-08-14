@@ -27,7 +27,6 @@ let storeCreator = initialState => {
 }
 
 let store = storeCreator({
-  activeTab: 'Home',
   count: 0
 });
 

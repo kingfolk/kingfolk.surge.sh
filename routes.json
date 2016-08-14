@@ -8,9 +8,26 @@
     }
   },
   {
-    "path": "/shared_matting_webgl",
-    "page": "./pages/home/sharedMatting"
+    "path": "/projects",
+    "page": "./pages/home",
+    "chunk": "main"
   },
+  {
+    "path": "/projects/:projectName",
+    "page": "./pages/home",
+    "chunk": "main"
+  },
+  {
+    "path": "/aboutme",
+    "page": "./pages/home",
+    "chunk": "main"
+  },
+  {
+    "path": "/photos",
+    "page": "./pages/home",
+    "chunk": "main"
+  },
+
   {
     "path": "/error",
     "page": "./pages/error",

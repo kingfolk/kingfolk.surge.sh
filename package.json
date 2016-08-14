@@ -12,6 +12,7 @@
     "fastclick": "^1.0.6",
     "history": "^3.0.0",
     "igloo-ext": "^0.1.6",
+    "jquery": "^3.1.0",
     "lodash": "^4.13.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",

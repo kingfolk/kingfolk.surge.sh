@@ -14,8 +14,8 @@ class ImageDropZone extends Component {
         <div className={s['middle-align']}>
           <span className={s['align-helper']}></span>
           {
-            this.props.fileUrl ?
-            (<img className={s['fill-box']} src={this.props.fileUrl} />)
+            this.props.file ?
+            (<img className={s['fill-box']} src={this.props.file} />)
             : (<span className={s['fill-box']}>{this.props.placeHolder}</span>)
           }
         </div>
@@ -26,12 +26,12 @@ class ImageDropZone extends Component {
 
 ImageDropZone.propTypes = {
   onDrop: PropTypes.func.isRequired,
-  fileUrl: PropTypes.string,
+  file: PropTypes.string,
   placeHolder: PropTypes.string
 };
 
 
-class Page extends Component {
+export default class Page extends Component {
 
   constructor() {
     super();
@@ -48,60 +48,60 @@ class Page extends Component {
     this.runner = new SharedGL(canvas);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextState.image != this.state.image
-      || nextState.trimap != this.state.trimap;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextState.image != this.state.image
+  //     || nextState.trimap != this.state.trimap;
+  // }
 
   render() {
+    console.log('s rerender');
+    console.log(this.state.image);
     return (
-      <Layout>
-        <div id={s['container']}>
-          <div>
-            Can download test data from <a href="http://www.alphamatting.com/datasets.php">http://www.alphamatting.com/datasets.php</a>
+      <div id={s['container']}>
+        <div>
+          Can download test data from <a href="http://www.alphamatting.com/datasets.php">http://www.alphamatting.com/datasets.php</a>
+        </div>
+        <br/>
+        <div id={s['left-panel']}>
+          <div id={s['image-box']}>
+            <ImageDropZone
+              placeHolder="Drop Image Here"
+              file={this.state.image.preview}
+              onDrop={this.onDropImage.bind(this)}
+            />
           </div>
-          <br/>
-          <div id={s['left-panel']}>
-            <div id={s['image-box']}>
-              <ImageDropZone
-                placeHolder="Drop Image Here"
-                file={this.state.image.preview}
-                onDrop={this.onDropImage.bind(this)}
-              />
-            </div>
-            <div id={s['image-box']}>
-              <ImageDropZone
-                placeHolder="Drop Trimap Here"
-                file={this.state.trimap.preview}
-                onDrop={this.onDropTrimap.bind(this)}
-              />
-            </div>
-            <div id={s['image-box']}>
-              <button
-                className='mdl-button mdl-js-button mdl-button--raised'
-                type='button'
-                onClick={this.matting.bind(this)}>
-                matting
-              </button>
-            </div>
+          <div id={s['image-box']}>
+            <ImageDropZone
+              placeHolder="Drop Trimap Here"
+              file={this.state.trimap.preview}
+              onDrop={this.onDropTrimap.bind(this)}
+            />
           </div>
-          <div id={s['right-content']}>
-            <div className={s['square']}>
-              <canvas id='matting-canvas'
-                width={700}
-                height={700}
-              />
-            </div>
+          <div id={s['image-box']}>
+            <button
+              className='mdl-button mdl-js-button mdl-button--raised'
+              type='button'
+              onClick={this.matting.bind(this)}>
+              matting
+            </button>
           </div>
         </div>
-      </Layout>
+        <div id={s['right-content']}>
+          <div className={s['square']}>
+            <canvas id='matting-canvas'
+              width={600}
+              height={600}
+            />
+          </div>
+        </div>
+      </div>
     );
   }
 
   matting() {
 
     let img = new Image();
-    img.src = this.state.image.preview ;
+    img.src = this.state.image.preview;
     img.onload = () => {
       let canvas = document.getElementById('matting-canvas');
       let s = this.getScale(canvas.width, canvas.height, img.naturalWidth, img.naturalHeight);
@@ -117,6 +117,7 @@ class Page extends Component {
       image: file
     })
     this.runner.setImage(file.preview);
+    // this.props.onUpdate();
   }
 
   onDropTrimap(file) {
@@ -124,6 +125,7 @@ class Page extends Component {
       trimap: file
     })
     this.runner.setTrimap(file.preview);
+    // this.props.onUpdate();
   }
 
   getScale(cw, ch, iw, ih) {
@@ -151,5 +153,3 @@ class Page extends Component {
   }
 
 }
-
-export default Page;
