@@ -5,20 +5,24 @@ import Link from '../../components/Link';
 import logoImage from '../../images/logo.png';
 
 export default class Contact extends Component {
+  onMail() {
+    let address = "jjlfolk@gmail.com";
+    window.location.href = 'mailto:' + address;
+  }
   render() {
     return (
-      <div className={`mdl-card ${s['something-else']} mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop`}>
-        <button className="max-button mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
-          <i className="material-icons mdl-color-text--white" role="presentation">add</i>
-          <span className="visuallyhidden">add</span>
-        </button>
-        <div className={`mdl-card__media ${s['media-cover']} mdl-color--white mdl-color-text--grey-600`}>
-          <img src={logoImage}/>
-          +1,337
+      <div className={`mdl-card mdl-cell mdl-cell--8-col mdl-cell--3-col-desktop ${s['something-else']}`}>
+        <div
+          onClick={this.onMail}
+          className={`mdl-card__media ${s['media-cover']} mdl-color--white mdl-color-text--grey-600`}>
+          {/*<a href="mailto:example@example.com">*/}
+            <img src={logoImage}/>
+          {/*</a>*/}
+          +1
         </div>
         <div className={`mdl-card__supporting-text ${s['meta']} ${s['meta--fill']} mdl-color-text--grey-600`}>
           <div>
-            <strong>The Newist</strong>
+            <strong>Contact me</strong>
           </div>
           <ul className="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" htmlFor="menubtn">
             <li className="mdl-menu__item">About</li>

@@ -39,19 +39,7 @@ TimePiece.propType = {
 export default class Aboutme extends Component {
   render() {
     return (
-      <div
-        id={this.props.id}
-        className={`mdl-card ${sl['demo-resume']} ${s[`${this.props.cover}`]} mdl-cell mdl-cell--12-col`}>
-        <button
-          className={`${s['max-button']} mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent`}
-          onClick={this.props.onClose}
-          >
-          <i className="material-icons mdl-color-text--white" role="presentation">remove</i>
-          <span className="visuallyhidden">remove</span>
-        </button>
-        <div className={`mdl-card__media ${s['media-cover']} mdl-color-text--grey-50`}>
-          <h3><a href="entry.html">About me</a></h3>
-        </div>
+      <div className={sl['demo-resume']}>
 
 
         <section className="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">

@@ -54,8 +54,6 @@ export default class Page extends Component {
   // }
 
   render() {
-    console.log('s rerender');
-    console.log(this.state.image);
     return (
       <div id={s['container']}>
         <div>

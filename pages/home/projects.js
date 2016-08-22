@@ -64,19 +64,7 @@ export default class Projects extends React.Component {
 
   render() {
     return (
-      <div
-        id={this.props.id}
-        className={`mdl-card ${s[`${this.props.cover}`]} mdl-cell mdl-cell--12-col`}>
-        <button
-          className={`${s['max-button']} mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent`}
-          onClick={this.props.onClose}
-          >
-          <i className="material-icons mdl-color-text--white" role="presentation">remove</i>
-          <span className="visuallyhidden">remove</span>
-        </button>
-        <div className={`mdl-card__media ${s['media-cover']} mdl-color-text--grey-50`}>
-          <h3><a href="entry.html">Projects</a></h3>
-        </div>
+      <div>
 
         {
           this.props.children ?

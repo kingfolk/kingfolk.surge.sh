@@ -169,71 +169,42 @@ class HomePage extends React.Component {
             <div className={`${s['demo-blog__posts']} mdl-grid`}>
 
               <Card
+                id="aboutme"
                 title="About me"
                 cover="coffee-pic"
-                desc="Me in a nutshell. My schools and professionals."
-                cellCols="mdl-cell--8-col"
-                onExpand={this.onAboutmeExpand.bind(this)}
-              />
+                cellCols="mdl-cell--9-col"
+                lastUpdate="2016-08-14"
+                onExpand={this.onAboutmeExpand.bind(this)}>
+                  <Aboutme cover="coffee-pic"/>
+              </Card>
 
               <Contact />
 
-              {
-                this.state.expands.aboutme?
-                (
-                  <Aboutme
-                    id="aboutmeExpand"
-                    cover="coffee-pic"
-                    onClose={this.onAboutmeExpand.bind(this)}
-                  />
-                )
-                : null
-              }
 
               <Card
                 title="Projects"
+                id="projects"
                 cover="on-the-road-again"
-                desc="Projects of mine, only open-source allowed."
                 cellCols="mdl-cell--12-col"
-                onExpand={this.onProjectsExpand.bind(this)}
-              />
-
-              {
-                projectsExpand?
-                (
-                  <Projects
-                    id="projectsExpand"
-                    cover="on-the-road-again"
-                    onClose={this.onProjectsExpand.bind(this)}
-                  />
-                ) : null
-              }
+                lastUpdate="2016-08-14"
+                onExpand={this.onProjectsExpand.bind(this)}>
+                  <Projects cover="on-the-road-again" />
+              </Card>
 
               { this.renderProject() }
 
               <Card
                 title="Random Photography"
                 cover="shopping"
-                desc="Random photos toke by phone. From Lumia 830 to Xiaomi 5"
+                desc="Comming soon..."
                 cellCols="mdl-cell--12-col"
+                lastUpdate="2016-08-14"
                 onExpand={this.onPhotosExpand.bind(this)}
               />
 
-              {
-                this.state.expands.photos?
-                (
-                  <Photos
-                    id="photosExpand"
-                    cover="shopping"
-                    onClose={this.onPhotosExpand.bind(this)}
-                  />
-                )
-                : null
-              }
-
               <nav className={`${s['demo-nav']} mdl-cell mdl-cell--12-col`}>
                 <div className="section-spacer"></div>
-                <a href="entry.html" className={`${s['demo-nav__button']}`} title="show more">
+                <a href="https://github.com/kingfolk/kingfolk.surge.sh" className={`${s['demo-nav__button']}`} title="show more">
                   View Source
                   <button className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i className="material-icons" role="presentation">arrow_forward</i>
@@ -241,6 +212,7 @@ class HomePage extends React.Component {
                 </a>
               </nav>
             </div>
+
           </main>
         </div>
       </Layout>
@@ -250,15 +222,18 @@ class HomePage extends React.Component {
   renderProject() {
     if (this.state.expandProject == 'shared_matting_webgl') {
       return (
-        <Projects
+        <Card
+          title="Shared Matting"
           id="projectDemo"
           cover="on-the-road-again"
+          cellCols="mdl-cell--12-col"
+          type="removable"
           onClose={this.onProjectClose.bind(this)}
         >
           <SharedMatting
             onUpdate={this.onChildUpdate.bind(this)}
           />
-        </Projects>);
+        </Card>);
     }
   }
 }
